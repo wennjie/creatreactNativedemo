@@ -137,12 +137,12 @@ module.exports = {
         icon: 'https://os.alipayobjects.com/rmsportal/SdSqpihcSBoBrFO.png',
         module: require('../components/input-item/demo/basic'),
       },
-      {
-        title: 'Picker',
-        description: '选择器',
-        icon: 'https://os.alipayobjects.com/rmsportal/STBLvEutBwPySbL.png',
-        module: require('../components/picker/demo/popup'),
-      },
+      // {
+      //   title: 'Picker',
+      //   description: '选择器',
+      //   icon: 'https://os.alipayobjects.com/rmsportal/STBLvEutBwPySbL.png',
+      //   module: require('../components/picker/demo/popup'),
+      // },
       {
         title: 'PickerView',
         description: '选择器视图',

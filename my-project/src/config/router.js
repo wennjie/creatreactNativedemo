@@ -7,12 +7,12 @@ const  Router=[
       icon: 'https://os.alipayobjects.com/rmsportal/EFpWULKNsectBDK.png',
       module: require('../pages/index'),
     },
-    // {
-    //   title: 'ant',
-    //   description: '通告栏',
-    //   icon: 'https://os.alipayobjects.com/rmsportal/EFpWULKNsectBDK.png',
-    //   module: require('../ant'),
-    // },
+    {
+      title: 'ant',
+      description: '通告栏',
+      icon: 'https://os.alipayobjects.com/rmsportal/EFpWULKNsectBDK.png',
+      module: require('../ant'),
+    },
     {
       title: 'props',
       description: '搜索栏',

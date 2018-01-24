@@ -1,6 +1,6 @@
 import { StackNavigator } from 'react-navigation';
 import Router from './src/config/router';
-// import { UIVIEWS, UICONTROLS, OTHERS, UIBARS } from './src/list';
+import { UIVIEWS, UICONTROLS, OTHERS, UIBARS } from './src/list';
 import { StatusBar ,Alert } from 'react-native';
 // import {Alert} from 'react-native';
 const getOptions = title => ({
@@ -27,7 +27,7 @@ const scenes = {
   // },
 };
 
-[...Router].map((component) => {
+[...Router,...UIVIEWS, ...UICONTROLS, ...OTHERS, ...UIBARS].map((component) => {
   const Module = component.module.default;
   scenes[component.title] = {
     screen: Module,
