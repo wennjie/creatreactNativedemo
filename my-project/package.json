@@ -24,6 +24,8 @@
     "expo": "^25.0.0",
     "react": "16.2.0",
     "react-native": "0.52.0",
+    "react-native-keyboard-aware-scroll-view": "^0.4.3",
+    "react-native-keyboard-spacer": "^0.4.1",
     "react-navigation": "^1.0.0-beta.27"
   }
 }

@@ -60,7 +60,14 @@ const  Router=[
       description: '标签栏',
       icon: 'https://zos.alipayobjects.com/rmsportal/OZInMeAaDCHtaJU.png',
       module: require('../pages/SectionList'),
+    },
+    {
+      title: 'login',
+      description: '标签栏',
+      icon: 'https://zos.alipayobjects.com/rmsportal/OZInMeAaDCHtaJU.png',
+      module: require('../pages/login'),
     }
+
 
     
 ]

@@ -31,7 +31,7 @@ const scenes = {
   const Module = component.module.default;
   scenes[component.title] = {
     screen: Module,
-    navigationOptions: getOptions(component.title),
+    navigationOptions: getOptions(component.description),
   };
 });
 

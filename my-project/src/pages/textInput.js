@@ -1,30 +1,34 @@
+import KeyboardSpacer from 'react-native-keyboard-spacer';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import React, { Component } from 'react';
-import { AppRegistry, Text, TextInput, View ,StyleSheet} from 'react-native';
+import {
+  AppRegistry,
+  StyleSheet,
+  Image,
+  View,
+  TextInput,
+  Text
+} from 'react-native';
 
-export default class PizzaTranslator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {text: ''};
-  }
-
+var arr=[]
+for(var i = 0 ;i<30;i++){
+  arr.push(i)
+}
+export default class demo extends React.Component {
   render() {
     return (
-      <View style={{padding: 10}}>
-        <TextInput
-          style={styles.input}
-          placeholder="Type here to translate!"
-          onChangeText={(text) => this.setState({text})}
-        />
-        <Text style={{padding: 10, fontSize: 42}}>
-          {this.state.text}
-        </Text>
+      <KeyboardAwareScrollView>
+      <View>
+        {
+          arr.map(()=>(
+            <TextInput placeholder='4555' style={{height:40,color:'red'}}/>
+          ))
+        }
+        <TextInput placeholder='123' style={{height:40,color:'red'}}/>
+        <TextInput placeholder='123' style={{height:40,color:'red'}}/>
+        <TextInput placeholder='123' style={{height:40,color:'red'}}/>
       </View>
+    </KeyboardAwareScrollView>
     );
   }
 }
-const styles= new StyleSheet.create({
-    input:{
-        color:'red',
-        height:40
-    }
-})
