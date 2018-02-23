@@ -5,13 +5,15 @@ import { StatusBar ,Alert } from 'react-native';
 // import {Alert} from 'react-native';
 const getOptions = title => ({
   title,
-  // header:null,
+  header:null,
   headerStyle: {
     backgroundColor: 'black',
   },
   headerTintColor: 'white',
 });
 StatusBar.setBarStyle('light-content');
+
+
 const scenes = {
   // Home: {
   //   screen: Home,

@@ -18,8 +18,13 @@ const  Router=[
       description: 'shoutemUI',
       icon: 'https://os.alipayobjects.com/rmsportal/EFpWULKNsectBDK.png',
       module: require('../pages/shoutem/'),
+    },
+    {
+      title: 'Shoutem UI1',
+      description: 'shoutemUI',
+      icon: 'https://os.alipayobjects.com/rmsportal/EFpWULKNsectBDK.png',
+      module: require('../pages/shoutem/two.js'),
     }
-
     
 ]
 
