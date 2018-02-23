@@ -5,7 +5,7 @@ import { StatusBar ,Alert } from 'react-native';
 // import {Alert} from 'react-native';
 const getOptions = title => ({
   title,
-  // header:null,
+  header:null,
   headerStyle: {
     backgroundColor: 'black',
   },
@@ -29,6 +29,7 @@ const scenes = {
 
 [...Router,...UIVIEWS, ...UICONTROLS, ...OTHERS, ...UIBARS].map((component) => {
   const Module = component.module.default;
+  console.log(Module)
   scenes[component.title] = {
     screen: Module,
     navigationOptions: getOptions(component.description),

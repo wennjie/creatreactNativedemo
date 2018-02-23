@@ -1,69 +1,75 @@
-import React from 'react';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import React, { Component } from 'react';
+import { StackNavigator } from 'react-navigation';
 import {
+  AppRegistry,
   StyleSheet,
-  View,
-  Text,
   Image,
-  Platform,
-  TouchableOpacity,
-  Alert,
-  Linking,
-  ActivityIndicator,
-  StatusBar,
-  ScrollView
+  View,
+  TextInput,
+  Text
 } from 'react-native';
-import { List } from 'antd-mobile';
-import { Font } from 'expo';
-import  Router   from '../config/router';
-import  UILIST   from '../config/uiList';
-const styles = StyleSheet.create({
- 
-});
-
-// [...Router].map((e) => {
-
-// })
-
-class Home extends React.Component {
+import { InputItem, List, Button } from 'antd-mobile';
+export default class login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      animating: false,
-      Routers:Router
+      username:'',
+      password:''
     };
   }
-
   componentWillMount() {
-    // StatusBar.setBarStyle('light-content');
-    // Alert.alert(JSON.stringify(this.state))
-  }
+    alert(StackNavigator)
 
-  componentDidMount() {
-    Font.loadAsync({
-      'anticon': require('../../assets/fonts/iconfont.ttf'),
-    });
   }
-
   render() {
-    const { navigate } = this.props.navigation;
     return (
-      
-      <ScrollView>
-        <List style={styles.list}>
-        {
-          UILIST.map((e,i) => (
-          <List.Item
-            thumb="https://zos.alipayobjects.com/rmsportal/UIqwcqpVsIjvyYZ.png"
-            arrow="horizontal"
-            key={i}
-            onClick={() => navigate(e.title)}
-          >{e.title}</List.Item>) )
-        }
-        </List>
-      </ScrollView>
-      
+      <KeyboardAwareScrollView style={{paddingTop:340}}>
+         <List renderHeader={() => ''}>
+         <InputItem
+            clear
+            // error
+            type='text'
+            value={this.state.username}
+            onChange={(value) => {
+              this.setState({
+                username: value,
+              });
+            }}
+            placeholder="请输入用户名"
+          >
+            用户名
+          </InputItem>
+         <InputItem
+            clear
+            type="password"
+            value={this.state.password}
+            onChange={(value) => {
+              this.setState({
+                password: value,
+              });
+            }}
+            placeholder="请输入密码"
+          >
+            密码
+          </InputItem>
+        
+         </List>
+         <Button style={{marginTop:50}}
+              onClick={() => {
+                this.setState({
+                  focused: true,
+                });
+              }}
+              type="primary"
+            >
+              登录
+            </Button>
+      {/* <View>
+        <TextInput placeholder='用户名' style={{height:40,color:'red'}}/>
+        <TextInput placeholder='密码' style={{height:40,color:'red'}}/>
+      </View> */}
+    </KeyboardAwareScrollView>
     );
   }
 }
-
-export default Home;
