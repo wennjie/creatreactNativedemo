@@ -20,6 +20,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@shoutem/ui": "^0.23.4",
     "antd-mobile": "^2.1.4",
     "expo": "^25.0.0",
     "react": "16.2.0",

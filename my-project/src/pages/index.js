@@ -15,6 +15,7 @@ import {
 import { List } from 'antd-mobile';
 import { Font } from 'expo';
 import  Router   from '../config/router';
+import  UILIST   from '../config/uiList';
 const styles = StyleSheet.create({
  
 });
@@ -50,7 +51,7 @@ class Home extends React.Component {
       <ScrollView>
         <List style={styles.list}>
         {
-          Router.map((e,i) => (
+          UILIST.map((e,i) => (
           <List.Item
             thumb="https://zos.alipayobjects.com/rmsportal/UIqwcqpVsIjvyYZ.png"
             arrow="horizontal"
